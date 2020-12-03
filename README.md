@@ -19,3 +19,9 @@ $ yarn build
 # deploy
 $ yarn serverless
 ```
+
+## dev
+
+```bash
+$ yarn dev
+```
