@@ -4,11 +4,7 @@ import styles from '../styles/Csr.module.css'
 
 import Layout from '../components/Layout'
 
-type Props = {
-  currentTime: string
-}
-
-const Csr: FC<Props> = () => {
+const Csr: FC = () => {
   return (
     <Layout>
       <div className={styles.container}>
