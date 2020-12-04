@@ -4,11 +4,7 @@ import useSWR from 'swr'
 import Layout from '../components/Layout'
 import styles from '../styles/NextApi.module.css'
 
-type Props = {
-  currentTime: string
-}
-
-const NextApi: FC<Props> = () => {
+const NextApi: FC = () => {
   return (
     <Layout>
       <div className={styles.container}>
