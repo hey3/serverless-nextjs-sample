@@ -25,3 +25,9 @@ $ yarn serverless
 ```bash
 $ yarn dev
 ```
+
+## use environment variables
+
+create `env-{stage}` file
+
+This sample allows dev | staging | prod
