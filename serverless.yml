@@ -1,2 +1,7 @@
 serverlessNextjsSample:
   component: "./node_modules/@sls-next/serverless-component"
+  inputs:
+    bucketName: ${env.BUCKET_NAME}
+    name:
+      defaultLambda: ${env.DEFAULT_LAMBDA_NAME}
+      apiLambda: ${env.API_LAMBDA_NAME}
