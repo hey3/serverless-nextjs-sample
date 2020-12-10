@@ -1,13 +1,8 @@
-name: staging
+name: dev
 
 on:
-  push:
-    branches: ['staging']
-
-env:
-  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  AWS_DEFAULT_REGION: ap-northeast-1
+  pull_request:
+    branches: ['*']
 
 jobs:
   build:
@@ -35,5 +30,9 @@ jobs:
             ${{ runner.os }}-
       - name: npm install
         run: yarn
-      - name: deploy to staging
-        run: yarn deploy:staging
+      - name: run typecheck
+        run: yarn typecheck
+      - name: run eslint
+        run: yarn lint
+      - name: run prettier
+        run: yarn format

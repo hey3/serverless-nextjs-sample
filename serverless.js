@@ -11,7 +11,7 @@ class Deploy extends Component {
       const template = await this.load('@serverless/template', stage)
       return await template({ template: 'serverless.yml' })
     } else {
-      this.context.log('No environment defined... Choices are staging and prod')
+      this.context.log('No environment defined... Choices are dev, staging and prod')
     }
   }
 
